@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="./res/jquery.js" type="text/javascript"></script>
+    <style>
+        .zones {
+            width: 100%;
+            display: table;
+        }
+
+        .zone {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .zone button {
+            width: 60px;
+            height: 60px;
+            line-height: 30px;
+            padding: 0 0 0 0;
+            margin-bottom: 10px;
+        }
+
+        #totalWords {
+            margin-left: 5px;
+            color: #39E;
+        }
+
+        #words {
+            margin-top: 20px;
+            width: 350px;
+            display: table;
+        }
+
+        #words .word {
+            display: table;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #cccccc;
+            background-color: #f0f0f0;
+            float: left;
+            margin-right: 3px;
+            margin-bottom: 3px;
+            text-align: center;
+        }
+
+        .zone button.slt {
+            font-weight: bolder;
+            color: #39E;
+        }
+
+        .show {
+            margin-right: 20px;
+        }
+
+        .showPost {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            margin-bottom: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="zones">
+    <div class="zone leftTop" >
+        <h5>top left</h5>
+        <button class="left-top" data-attr="0"  >0 <br />亠 </button>
+        <button class="left-top" data-attr="1">1 <br />一乚</button>
+        <button class="left-top" data-attr="2">2 <br />丨丿亅</button>
+        <button class="left-top" data-attr="3">3 <br />丶</button>
+        <button class="left-top" data-attr="4">4 <br />十乂</button>
+        <br/>
+        <button class="left-top" data-attr="5" >5 <br /> 扌</button>
+        <button class="left-top" data-attr="6" >6 <br />口</button>
+        <button class="left-top" data-attr="7" >7 <br />﹁「」﹂</button>
+        <button class="left-top" data-attr="8" >8 <br />八丷人</button>
+        <button class="left-top" data-attr="9" >9 <br />小忄⺌</button>
+    </div>
+
+
+    <div class="zone rightTop">
+        <h5>top right</h5>
+        <button class="right-top" data-attr="0">0<br />亠</button>
+        <button class="right-top" data-attr="1">1<br />一乚</button>
+        <button class="right-top" data-attr="2">2<br />丨丿亅</button>
+        <button class="right-top" data-attr="3">3<br />丶</button>
+        <button class="right-top" data-attr="4">4<br />十乂</button>
+        <br/>                                    
+        <button class="right-top" data-attr="5">5 <br /> 扌</button>
+        <button class="right-top" data-attr="6">6 <br />口</button>
+        <button class="right-top" data-attr="7">7 <br />﹁「」﹂</button>
+        <button class="right-top" data-attr="8">8 <br />八丷人</button>
+        <button class="right-top" data-attr="9">9 <br />小忄⺌</button>
+    </div>
+
+    <div class="zone leftBottom">
+        <h5>bottom left</h5>
+        <button class="left-bottom" data-attr="0">0<br />亠</button>
+        <button class="left-bottom" data-attr="1">1<br />一乚</button>
+        <button class="left-bottom" data-attr="2">2<br />丨丿亅</button>
+        <button class="left-bottom" data-attr="3">3<br />丶</button>
+        <button class="left-bottom" data-attr="4">4<br />十乂</button>
+        <br/>                                      
+        <button class="left-bottom" data-attr="5">5 <br /> 扌</button>
+        <button class="left-bottom" data-attr="6">6 <br />口</button>
+        <button class="left-bottom" data-attr="7">7 <br />﹁「」﹂</button>
+        <button class="left-bottom" data-attr="8">8 <br />八丷人</button>
+        <button class="left-bottom" data-attr="9">9 <br />小忄⺌</button>
+    </div>
+
+    <div class="zone rightBottom">
+        <h5>bottom right</h5>
+        <button class="right-bottom" data-attr="0">0<br />亠</button>
+        <button class="right-bottom" data-attr="1">1<br />一乚</button>
+        <button class="right-bottom" data-attr="2">2<br />丨丿亅</button>
+        <button class="right-bottom" data-attr="3">3<br />丶</button>
+        <button class="right-bottom" data-attr="4">4<br />十乂</button>
+        <br/>                                       
+        <button class="right-bottom" data-attr="5">5 <br /> 扌</button>
+        <button class="right-bottom" data-attr="6">6 <br />口</button>
+        <button class="right-bottom" data-attr="7">7 <br />﹁「」﹂</button>
+        <button class="right-bottom" data-attr="8">8 <br />八丷人</button>
+        <button class="right-bottom" data-attr="9">9 <br />小忄⺌</button>
+    </div>
+
+    <div class="zone bottom">
+        <h5>extra part</h5>
+        <button class="bottom-bottom" data-attr="0">0<br />亠</button>
+        <button class="bottom-bottom" data-attr="1">1<br />一乚</button>
+        <button class="bottom-bottom" data-attr="2">2<br />丨丿亅</button>
+        <button class="bottom-bottom" data-attr="3">3<br />丶</button>
+        <button class="bottom-bottom" data-attr="4">4<br />十乂</button>
+        <br/>                                        
+        <button class="bottom-bottom" data-attr="5">5 <br /> 扌</button>
+        <button class="bottom-bottom" data-attr="6">6 <br />口</button>
+        <button class="bottom-bottom" data-attr="7">7 <br />﹁「」﹂</button>
+        <button class="bottom-bottom" data-attr="8">8 <br />八丷人</button>
+        <button class="bottom-bottom" data-attr="9">9 <br />小忄⺌</button>
+    </div>
+</div>
+<hr></hr>
+<div class="content">
+    <h5>Current components<span id="currentKey"></span>。Total words<span id="totalWords">0</span> 。</h5>
+
+    <button class="show reset">reset</button>
+    <div id="words"></div>
+    <button class="showPost show" disabled>Show next <span class="num">-</span> words</button>
+    <hr></hr>
+</div>
+
+
+</body>
+<script type="text/javascript">
+
+    let dictionaryArray = [];
+    let selectArr = [];
+    const pageSize = 50;
+    let currentIndex = 0;
+    let selectKeyObj = {
+        leftTop: "*",
+        leftBottom: "*",
+        rightTop: "*",
+        rightBottom: "*",
+        bottomBottom: "*",
+    };
+
+    $(document).ready(function () {
+        // fillBtnHtml();
+
+        $(".zones button").attr("disabled", true);
+        $(".show .num").html(pageSize);
+        $.getJSON("./res/dictionary_full.json", function (data) {
+            dictionaryArray = data;
+            $(".zones button").attr("disabled", false);
+            console.log("dictionaryArray length = ", dictionaryArray.length);
+        });
+        $(".left-top").click(function () {
+            selectKeyObj.leftTop = $(this).data("attr");
+            $(this).siblings().removeClass("slt");
+            $(this).addClass("slt");
+            selectKeyObjChanged();
+        });
+        $(".left-bottom").click(function () {
+            selectKeyObj.leftBottom = $(this).data("attr");
+            $(this).siblings().removeClass("slt");
+            $(this).addClass("slt");
+            selectKeyObjChanged();
+        });
+        $(".right-top").click(function () {
+            selectKeyObj.rightTop = $(this).data("attr");
+            $(this).siblings().removeClass("slt");
+            $(this).addClass("slt");
+            selectKeyObjChanged();
+        });
+        $(".right-bottom").click(function () {
+            selectKeyObj.rightBottom = $(this).data("attr");
+            $(this).siblings().removeClass("slt");
+            $(this).addClass("slt");
+            selectKeyObjChanged();
+        });
+        $(".bottom-bottom").click(function () {
+            selectKeyObj.bottomBottom = $(this).data("attr");
+            $(this).siblings().removeClass("slt");
+            $(this).addClass("slt");
+            selectKeyObjChanged();
+        });
+        console.log("00998".split(""));
+
+
+        $("button.showPre").click(function () {
+            currentIndex = currentIndex - pageSize;
+            showWords();
+        });
+
+        $("button.showPost").click(function () {
+            currentIndex = currentIndex + pageSize;
+            showWords(true);
+        });
+
+        $(".reset").click(function () {
+            reset();
+        });
+    });
+
+
+    function fillBtnHtml() {
+        $("[data-attr='0']").html("0 亠");
+        $("[data-attr='1']").html("1 一乚");
+        $("[data-attr='2']").html("2 丨丿亅");
+        $("[data-attr='3']").html("3 丶");
+        $("[data-attr='4']").html("4 十乂");
+        $("[data-attr='5']").html("5 扌");
+        $("[data-attr='6']").html("6 口");
+        $("[data-attr='7']").html("7 ﹁「」﹂");
+        $("[data-attr='8']").html("8 八丷人");
+        $("[data-attr='9']").html("9 小忄⺌");
+    }
+
+    function selectKeyObjChanged() {
+        console.log(JSON.stringify(selectKeyObj));
+        selectArr = [];
+        currentIndex = 0;
+        if (selectKeyToString() !== "*****") {
+            for (const i in dictionaryArray) {
+                const code = dictionaryArray[i].code;
+                let codeArr = code.split("");
+                if (selectKeyObj.leftTop !== "*" && parseInt(codeArr[0]) !== parseInt(selectKeyObj.leftTop)) {
+                    continue;
+                }
+                if (selectKeyObj.rightTop !== "*" && parseInt(codeArr[1]) !== parseInt(selectKeyObj.rightTop)) {
+                    continue;
+                }
+                if (selectKeyObj.leftBottom !== "*" && parseInt(codeArr[2]) !== parseInt(selectKeyObj.leftBottom)) {
+                    continue;
+                }
+                if (selectKeyObj.rightBottom !== "*" && parseInt(codeArr[3]) !== parseInt(selectKeyObj.rightBottom)) {
+                    continue;
+                }
+                if (selectKeyObj.bottomBottom !== "*" && parseInt(codeArr[4]) !== parseInt(selectKeyObj.bottomBottom)) {
+                    continue;
+                }
+                selectArr.push(dictionaryArray[i]);
+            }
+        }
+        
+        console.log("current=" + JSON.stringify(selectKeyObj) + "。charactersobtained=" + selectArr.length);
+        showWords(false);
+    }
+
+    function showWords(isAppend) {
+        $("#totalWords").html(selectArr.length);
+        $("#currentIndex").html(currentIndex);
+        let htmlWord = '';
+        for (let i = currentIndex; i < currentIndex + pageSize && i < selectArr.length; i++) {
+            htmlWord += "<div class='word'>" + selectArr[i].word + "</div>";
+        }
+        $("#currentKey").html(selectKeyToString());
+        if (isAppend) {
+            $("#words").append(htmlWord);
+        } else {
+            $("#words").html(htmlWord);
+        }
+        if (currentIndex === 0) {
+            $("button.showPre").attr("disabled", true);
+        } else {
+            $("button.showPre").attr("disabled", false);
+        }
+        if (currentIndex + pageSize >= selectArr.length) {
+            $("button.showPost").attr("disabled", true);
+        } else {
+            $("button.showPost").attr("disabled", false);
+        }
+    }
+
+    function selectKeyToString() {
+        return selectKeyObj.leftTop.toString() + selectKeyObj.rightTop.toString() + selectKeyObj.leftBottom.toString() + selectKeyObj.rightBottom.toString() + selectKeyObj.bottomBottom.toString();
+    }
+
+    function reset() {
+        selectKeyObj = {
+            leftTop: "*",
+            leftBottom: "*",
+            rightTop: "*",
+            rightBottom: "*",
+            bottomBottom: "*",
+        };
+        $(".slt").removeClass("slt");
+        selectKeyObjChanged();
+    }
+
+</script>
+</html>
